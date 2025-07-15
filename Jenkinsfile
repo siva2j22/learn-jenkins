@@ -23,8 +23,7 @@ environment {
             steps {
                 sh """
                     echo "i write shell script"
-                    env
-
+                    echo "$GREETING"
                 """
             }
         }
