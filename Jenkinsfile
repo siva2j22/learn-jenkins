@@ -1,7 +1,7 @@
 pipeline {
    agent {
     node {
-        label 'AGENT-1  '
+        label 'AGENT-1'
        }
 }
     // build
@@ -22,8 +22,8 @@ pipeline {
             }
         }
     }
-        //post built 
-       post { 
+    //post built 
+    post { 
         always { 
             echo 'I will always say Hello again!'
         }
