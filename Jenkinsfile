@@ -26,7 +26,7 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
         }
-        always { 
+        failure { 
             echo 'if pipeline fails used generally fails'
         }
         success { 
