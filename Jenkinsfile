@@ -4,9 +4,14 @@ pipeline {
             label 'AGENT-1'
        }
 }
-environment {
-    GREETING = 'Hello Jenkins'
-}
+        environment {
+            GREETING = 'Hello Jenkins'
+        }
+        options {
+            timeout(time: 1, unit: 'HOURS')
+            disableConcurrentBuilds()
+        }
+
     // build
     stages {
         stage('Build') {
@@ -24,6 +29,7 @@ environment {
                 sh """
                     echo "i write shell script"
                     echo "$GREETING"
+                    sleep 10
                 """
             }
         }
